@@ -17,7 +17,7 @@ alias vim=nvim
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-PATH="$PATH":"/opt/nvim-linux-x86_64/bin/nvim/bin/"
+PATH="$PATH":"/opt/nvim-linux-x86_64/bin/"
 
 PATH="$PATH":"$HOME/.local/scripts/"
 chmod +x "$HOME/.local/scripts/tmux-sessionizer.sh"
