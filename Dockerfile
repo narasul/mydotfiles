@@ -29,3 +29,13 @@ run mkdir -p $HOME/.local/scripts
 run cp $HOME/.config/mydotfiles/tmux-sessionizer.sh $HOME/.local/scripts/
 run cp $HOME/.config/mydotfiles/.zshrc $HOME/.zshrc
 run cp $HOME/.config/mydotfiles/.tmux.conf ~/.tmux.conf
+
+run apt-get install -y locales
+run echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+run locale-gen
+run DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
+
+ENV LC_CTYPE=en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
+ENV LANG=en_US.UTF-8
